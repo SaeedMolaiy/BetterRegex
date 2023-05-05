@@ -1,5 +1,5 @@
 src/BetterRegex/bin/
 src/BetterRegex/obj/
-src/BetterRegex.Definations/bin/
-src/BetterRegex.Definations/obj/
+src/BetterRegex.Definition/bin/
+src/BetterRegex.Definition/obj/
 src/.vs/

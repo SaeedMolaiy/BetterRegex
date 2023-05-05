@@ -1,4 +1,5 @@
-﻿using BetterRegex.Infrastructure.Interfaces;
+﻿using BetterRegex.Implementations.Validators;
+using BetterRegex.Infrastructure.Interfaces;
 using BetterRegex.Types;
 
 namespace BetterRegex.Factories
@@ -7,28 +8,20 @@ namespace BetterRegex.Factories
     {
         public IRegexValidator GetRegexValidator(RegexValidatorTypes regexValidatorType)
         {
-            switch (regexValidatorType)
+            return regexValidatorType switch
             {
-                case RegexValidatorTypes.PhoneNumber:
-                    break;
+                RegexValidatorTypes.PhoneNumber => new PhoneNumberValidator(),
 
-                case RegexValidatorTypes.Email:
-                    break;
+                RegexValidatorTypes.Email => new EmailValidator(),
 
-                case RegexValidatorTypes.Sql:
-                    break;
+                RegexValidatorTypes.Sql => new SqlValidator(),
 
-                case RegexValidatorTypes.Html:
-                    break;
+                RegexValidatorTypes.Html => new HtmlValidator(),
 
-                case RegexValidatorTypes.Url:
-                    break;
+                RegexValidatorTypes.Url => new UrlValidator(),
 
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(regexValidatorType), regexValidatorType, null);
-            }
-
-            return null!;
+                _ => throw new ArgumentOutOfRangeException(nameof(regexValidatorType), regexValidatorType, null)
+            };
         }
     }
 }
