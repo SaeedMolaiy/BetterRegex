@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterRegex", "BetterRegex\BetterRegex.csproj", "{DFF6D00D-2EBE-41B6-9003-5DC99A4F22D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BetterRegex", "BetterRegex\BetterRegex.csproj", "{DFF6D00D-2EBE-41B6-9003-5DC99A4F22D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterRegex.Definations", "BetterRegex.Definations\BetterRegex.Definations.csproj", "{310FBCC2-C8FA-4FF0-88F0-0CCFFB6F2C27}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{DFF6D00D-2EBE-41B6-9003-5DC99A4F22D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFF6D00D-2EBE-41B6-9003-5DC99A4F22D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFF6D00D-2EBE-41B6-9003-5DC99A4F22D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{310FBCC2-C8FA-4FF0-88F0-0CCFFB6F2C27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{310FBCC2-C8FA-4FF0-88F0-0CCFFB6F2C27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{310FBCC2-C8FA-4FF0-88F0-0CCFFB6F2C27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{310FBCC2-C8FA-4FF0-88F0-0CCFFB6F2C27}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
