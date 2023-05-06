@@ -2,7 +2,7 @@
 {
     public enum RegexValidatorTypes
     {
-        PhoneNumber,
+        MobileNumber,
         Email,
         Sql,
         Html,

@@ -10,7 +10,7 @@ namespace BetterRegex.Factories
         {
             return regexValidatorType switch
             {
-                RegexValidatorTypes.PhoneNumber => new PhoneNumberValidator(),
+                RegexValidatorTypes.MobileNumber => new MobileNumberValidator(),
 
                 RegexValidatorTypes.Email => new EmailValidator(),
 

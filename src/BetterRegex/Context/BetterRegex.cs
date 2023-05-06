@@ -13,7 +13,7 @@ namespace BetterRegex.Context
             ValidatorFactory = new ValidatorFactory();
         }
 
-        public static IRegexValidator CreateRegex(RegexValidatorTypes validatorType)
+        public static IRegexValidator CreateRegexValidator(RegexValidatorTypes validatorType)
         {
             return ValidatorFactory.GetRegexValidator(validatorType);
         }

@@ -3,7 +3,7 @@ using BetterRegex.Infrastructure.Interfaces;
 
 namespace BetterRegex.Implementations.Validators
 {
-    internal class PhoneNumberValidator : RegexValidator, IRegexValidator
+    internal class MobileNumberValidator : RegexValidator, IRegexValidator
     {
         public bool IsValid(string text, string pattern)
         {
