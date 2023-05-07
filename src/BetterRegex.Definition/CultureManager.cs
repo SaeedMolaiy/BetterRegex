@@ -1,44 +1,45 @@
-﻿using BetterRegex.Definition.Patterns.MobileNumber.Base;
-using BetterRegex.Definition.Types;
+﻿using BetterRegex.Definition.Types;
+using BetterRegex.Definition.Patterns;
+
+using BetterRegex.Common.Configs;
 
 namespace BetterRegex.Definition
 {
-    public static class CultureManager
+    public class CultureManager
     {
-        private static readonly IDictionary<string, string> CustomMobileNumberDictionary;
-        private static IDictionary<Countries, string> _mobileNumberDictionary;
+        private readonly IDictionary<string, string> CustomMobileNumberDictionary;
+        private readonly MobileNumberManager _mobileNumberManager;
 
-        static CultureManager()
+        private IDictionary<Countries, string> _mobileNumberDictionary;
+
+        public CultureManager(ConfigManager configManager)
         {
-            _mobileNumberDictionary = new Dictionary<Countries, string>();
-
             CustomMobileNumberDictionary = new Dictionary<string, string>();
+
+            _mobileNumberDictionary = new Dictionary<Countries, string>();
+            _mobileNumberManager = new MobileNumberManager(configManager);
 
             InitializeMobileNumberDirectory();
         }
 
-        public static void AddCustomMobilePattern(string countryCode, string pattern)
+        public void AddCustomMobilePattern(string countryCode, string pattern)
         {
             CustomMobileNumberDictionary.Add(countryCode, pattern);
         }
 
-        public static string GetMobileNumberPattern(Countries countries)
+        public string GetMobileNumberPattern(Countries countries)
         {
             return _mobileNumberDictionary.SingleOrDefault(
                 x => x.Key == countries).Value;
         }
 
-        public static string GetCustomMobileNumberPattern(string countryCode)
+        public string GetCustomMobileNumberPattern(string countryCode)
         {
             return CustomMobileNumberDictionary.SingleOrDefault(
                 x => x.Key == countryCode).Value;
         }
 
-        private static void InitializeMobileNumberDirectory()
-        {
-            var mobileNumberManager = new MobileNumberManager();
-
-            _mobileNumberDictionary = mobileNumberManager.GetMobileNumberPatterns();
-        }
+        private void InitializeMobileNumberDirectory()
+            => _mobileNumberDictionary = _mobileNumberManager.GetMobileNumberPatterns();
     }
 }

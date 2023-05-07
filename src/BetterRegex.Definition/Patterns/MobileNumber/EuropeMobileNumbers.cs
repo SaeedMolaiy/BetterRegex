@@ -1,8 +1,6 @@
-﻿using BetterRegex.Definition.Patterns.MobileNumber.Base;
-
-namespace BetterRegex.Definition.Patterns.MobileNumber
+﻿namespace BetterRegex.Definition.Patterns.MobileNumber
 {
-    internal class EuropeMobileNumbers : MobileNumberManager
+    internal class EuropeMobileNumbers
     {
         //TODO add some of asia countries mobile number pattern
     }
