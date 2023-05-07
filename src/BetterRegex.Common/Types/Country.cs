@@ -1,6 +1,6 @@
 ﻿namespace BetterRegex.Definition.Types
 {
-    public enum Countries
+    public enum Country
     {
         //TODO
     }

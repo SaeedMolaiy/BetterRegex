@@ -1,7 +1,11 @@
-﻿namespace BetterRegex.Definition.Patterns.MobileNumber
+﻿using BetterRegex.Definition.Types;
+
+namespace BetterRegex.Definition.Patterns.MobileNumber
 {
     internal class AsiaMobileNumbers
     {
-        //TODO add some of asia countries mobile number pattern
+        public void AddAsiaMobileNumberPatterns(IDictionary<Country, string> dictionary)
+        {
+        }
     }
 }
