@@ -2,4 +2,6 @@ src/BetterRegex/bin/
 src/BetterRegex/obj/
 src/BetterRegex.Definition/bin/
 src/BetterRegex.Definition/obj/
+src/BetterRegex.Common/bin/
+src/BetterRegex.Common/obj/
 src/.vs/

@@ -6,9 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\BetterRegex.Common\BetterRegex.Common.csproj" />
-    <ProjectReference Include="..\BetterRegex.Definition\BetterRegex.Definition.csproj" />
-  </ItemGroup>
-
 </Project>

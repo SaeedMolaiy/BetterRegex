@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BetterRegex", "BetterRegex\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BetterRegex.Definition", "BetterRegex.Definition\BetterRegex.Definition.csproj", "{D591D393-2510-4288-8D6A-5FF5AF4EA106}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterRegex.Common", "BetterRegex.Common\BetterRegex.Common.csproj", "{C304D07F-C7F1-483A-890C-9B80DD046693}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D591D393-2510-4288-8D6A-5FF5AF4EA106}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D591D393-2510-4288-8D6A-5FF5AF4EA106}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D591D393-2510-4288-8D6A-5FF5AF4EA106}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C304D07F-C7F1-483A-890C-9B80DD046693}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C304D07F-C7F1-483A-890C-9B80DD046693}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C304D07F-C7F1-483A-890C-9B80DD046693}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C304D07F-C7F1-483A-890C-9B80DD046693}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
