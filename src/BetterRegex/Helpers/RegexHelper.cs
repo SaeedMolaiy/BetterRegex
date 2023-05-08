@@ -1,12 +1,11 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace BetterRegex.Helpers
+namespace BetterRegex.Helpers;
+
+internal static class RegexHelper
 {
-    internal static class RegexHelper
+    public static Regex GetRegex(string pattern)
     {
-        public static Regex GetRegex(string pattern)
-        {
-            return new Regex(pattern);
-        }
+        return new Regex(pattern);
     }
 }

@@ -1,11 +1,20 @@
-﻿using BetterRegex.Definition.Types;
+﻿using BetterRegex.Common.Helpers;
 
-namespace BetterRegex.Definition.Patterns.MobileNumber
+namespace BetterRegex.Definition.Patterns.MobileNumber;
+
+using BetterRegex.Common.Types;
+
+internal class AmericaMobileNumbers
 {
-    internal class AmericaMobileNumbers
+    private readonly IDictionary<Country, string> _mobilePatterns;
+
+    public AmericaMobileNumbers()
     {
-        public void AddAmericaMobileNumberPatterns(IDictionary<Country, string> dictionary)
-        {
-        }
+        _mobilePatterns = new Dictionary<Country, string>();
+    }
+
+    public void AddAmericaMobileNumberPatterns(IDictionary<Country, string> dictionary)
+    {
+        dictionary.MergeDictionaries(_mobilePatterns);
     }
 }

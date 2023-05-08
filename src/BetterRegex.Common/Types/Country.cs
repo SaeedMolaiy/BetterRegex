@@ -1,7 +1,6 @@
-﻿namespace BetterRegex.Definition.Types
+﻿namespace BetterRegex.Common.Types;
+
+public enum Country
 {
-    public enum Country
-    {
-        //TODO
-    }
+    //TODO
 }

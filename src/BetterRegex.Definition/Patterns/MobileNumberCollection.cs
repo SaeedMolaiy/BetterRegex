@@ -1,60 +1,60 @@
-﻿using BetterRegex.Definition.Types;
+﻿using BetterRegex.Definition.Patterns.MobileNumber;
 
 using BetterRegex.Common.Configs;
-using BetterRegex.Definition.Patterns.MobileNumber;
 
-namespace BetterRegex.Definition.Patterns
+namespace BetterRegex.Definition.Patterns;
+
+using BetterRegex.Common.Types;
+
+internal class MobileNumberCollection
 {
-    internal class MobileNumberCollection
+    private readonly CultureConfig _cultureConfig;
+    private readonly IDictionary<Country, string> _mobileNumberPatterns;
+
+    public MobileNumberCollection(CultureConfig cultureConfig)
     {
-        private readonly CultureConfig _cultureConfig;
-        private readonly IDictionary<Country, string> _mobileNumberPatterns;
+        _mobileNumberPatterns = new Dictionary<Country, string>();
 
-        public MobileNumberCollection(CultureConfig cultureConfig)
+        _cultureConfig = cultureConfig;
+    }
+
+    public IDictionary<Country, string> GetMobileNumberPatterns()
+    {
+        InitializeDictionary();
+
+        return _mobileNumberPatterns;
+    }
+
+    private void InitializeDictionary()
+    {
+        if (_cultureConfig.ShouldIncludeAfricaMobilePatterns)
         {
-            _mobileNumberPatterns = new Dictionary<Country, string>();
+            var africaMobileNumberPatterns = new AfricaMobileNumbers();
 
-            _cultureConfig = cultureConfig;
+            africaMobileNumberPatterns.AddAfricaMobileNumberPatterns(_mobileNumberPatterns);
         }
 
-        public IDictionary<Country, string> GetMobileNumberPatterns()
+        if (_cultureConfig.ShouldIncludeAmericaMobilePatterns)
         {
-            InitializeDictionary();
+            var americaMobileNumberPatterns = new AmericaMobileNumbers();
 
-            return _mobileNumberPatterns;
+            americaMobileNumberPatterns.AddAmericaMobileNumberPatterns(_mobileNumberPatterns);
         }
 
-        private void InitializeDictionary()
+        if (_cultureConfig.ShouldIncludeAsiaMobilePatterns)
         {
-            if (_cultureConfig.ShouldIncludeAfricaMobilePatterns)
-            {
-                var africaMobileNumberPatterns = new AfricaMobileNumbers();
+            var asiaMobileNumberPatterns = new AsiaMobileNumbers();
 
-                africaMobileNumberPatterns.AddAfricaMobileNumberPatterns(_mobileNumberPatterns);
-            }
-
-            if (_cultureConfig.ShouldIncludeAmericaMobilePatterns)
-            {
-                var americaMobileNumberPatterns = new AmericaMobileNumbers();
-
-                americaMobileNumberPatterns.AddAmericaMobileNumberPatterns(_mobileNumberPatterns);
-            }
-
-            if (_cultureConfig.ShouldIncludeAsiaMobilePatterns)
-            {
-                var asiaMobileNumberPatterns = new AsiaMobileNumbers();
-
-                asiaMobileNumberPatterns.AddAsiaMobileNumberPatterns(_mobileNumberPatterns);
-            }
-
-            if (!_cultureConfig.ShouldIncludeEuropeMobilePatterns)
-            {
-                return;
-            }
-
-            var europeMobileNumberPatterns = new EuropeMobileNumbers();
-
-            europeMobileNumberPatterns.AddEuropeMobileNumberPatterns(_mobileNumberPatterns);
+            asiaMobileNumberPatterns.AddAsiaMobileNumberPatterns(_mobileNumberPatterns);
         }
+
+        if (!_cultureConfig.ShouldIncludeEuropeMobilePatterns)
+        {
+            return;
+        }
+
+        var europeMobileNumberPatterns = new EuropeMobileNumbers();
+
+        europeMobileNumberPatterns.AddEuropeMobileNumberPatterns(_mobileNumberPatterns);
     }
 }

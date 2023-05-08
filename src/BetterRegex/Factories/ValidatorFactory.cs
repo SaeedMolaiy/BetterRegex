@@ -2,26 +2,25 @@
 using BetterRegex.Infrastructure.Interfaces;
 using BetterRegex.Types;
 
-namespace BetterRegex.Factories
+namespace BetterRegex.Factories;
+
+internal class ValidatorFactory
 {
-    internal class ValidatorFactory
+    public IRegexValidator GetRegexValidator(RegexValidatorTypes regexValidatorType)
     {
-        public IRegexValidator GetRegexValidator(RegexValidatorTypes regexValidatorType)
+        return regexValidatorType switch
         {
-            return regexValidatorType switch
-            {
-                RegexValidatorTypes.MobileNumber => new MobileNumberValidator(),
+            RegexValidatorTypes.MobileNumber => new MobileNumberValidator(),
 
-                RegexValidatorTypes.Email => new EmailValidator(),
+            RegexValidatorTypes.Email => new EmailValidator(),
 
-                RegexValidatorTypes.Sql => new SqlValidator(),
+            RegexValidatorTypes.Sql => new SqlValidator(),
 
-                RegexValidatorTypes.Html => new HtmlValidator(),
+            RegexValidatorTypes.Html => new HtmlValidator(),
 
-                RegexValidatorTypes.Url => new UrlValidator(),
+            RegexValidatorTypes.Url => new UrlValidator(),
 
-                _ => throw new ArgumentOutOfRangeException(nameof(regexValidatorType), regexValidatorType, null)
-            };
-        }
+            _ => throw new ArgumentOutOfRangeException(nameof(regexValidatorType), regexValidatorType, null)
+        };
     }
 }

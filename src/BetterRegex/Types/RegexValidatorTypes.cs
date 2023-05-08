@@ -1,11 +1,10 @@
-﻿namespace BetterRegex.Types
+﻿namespace BetterRegex.Types;
+
+public enum RegexValidatorTypes
 {
-    public enum RegexValidatorTypes
-    {
-        MobileNumber,
-        Email,
-        Sql,
-        Html,
-        Url
-    }
+    MobileNumber,
+    Email,
+    Sql,
+    Html,
+    Url
 }
