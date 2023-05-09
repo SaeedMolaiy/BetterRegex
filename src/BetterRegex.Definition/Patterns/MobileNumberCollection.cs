@@ -1,10 +1,9 @@
 ﻿using BetterRegex.Definition.Patterns.MobileNumber;
 
 using BetterRegex.Common.Configs;
+using BetterRegex.Common.Types;
 
 namespace BetterRegex.Definition.Patterns;
-
-using BetterRegex.Common.Types;
 
 internal class MobileNumberCollection
 {

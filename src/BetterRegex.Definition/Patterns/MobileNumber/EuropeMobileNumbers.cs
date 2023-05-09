@@ -1,10 +1,10 @@
 ﻿using BetterRegex.Common.Helpers;
+using BetterRegex.Common.Types;
+using BetterRegex.Common.Infrastructure;
 
 namespace BetterRegex.Definition.Patterns.MobileNumber;
 
-using BetterRegex.Common.Types;
-
-internal class EuropeMobileNumbers
+internal class EuropeMobileNumbers : IDictionaryInitializer
 {
     private readonly IDictionary<Country, string> _mobilePatterns;
 
@@ -16,5 +16,10 @@ internal class EuropeMobileNumbers
     public void AddEuropeMobileNumberPatterns(IDictionary<Country, string> dictionary)
     {
         dictionary.MergeDictionaries(_mobilePatterns);
+    }
+
+    public void Initialize()
+    {
+        throw new NotImplementedException();
     }
 }
