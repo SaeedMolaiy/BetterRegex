@@ -15,6 +15,8 @@ internal class AsiaMobileNumbers : IDictionaryInitializer
 
     public void AddAsiaMobileNumberPatterns(IDictionary<Country, string> dictionary)
     {
+        Initialize();
+
         dictionary.MergeDictionaries(_mobilePatterns);
     }
 
