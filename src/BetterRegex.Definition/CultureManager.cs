@@ -1,10 +1,9 @@
 ﻿using BetterRegex.Definition.Patterns;
 
 using BetterRegex.Common.Configs;
+using BetterRegex.Common.Types;
 
 namespace BetterRegex.Definition;
-
-using BetterRegex.Common.Types;
 
 public class CultureManager
 {
