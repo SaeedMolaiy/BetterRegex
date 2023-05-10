@@ -5,12 +5,12 @@ using BetterRegex.Common.Types;
 
 namespace BetterRegex.Definition.Patterns;
 
-internal class MobileNumberCollection
+internal class MobileNumberPatternCollection
 {
     private readonly CultureConfig _cultureConfig;
     private readonly IDictionary<Country, string> _mobileNumberPatterns;
 
-    public MobileNumberCollection(CultureConfig cultureConfig)
+    public MobileNumberPatternCollection(CultureConfig cultureConfig)
     {
         _mobileNumberPatterns = new Dictionary<Country, string>();
 

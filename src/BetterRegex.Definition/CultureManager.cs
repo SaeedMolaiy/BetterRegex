@@ -7,23 +7,41 @@ namespace BetterRegex.Definition;
 
 public class CultureManager
 {
-    private readonly MobileNumberCollection _mobileNumberCollection;
-    private IDictionary<Country, string> _mobileNumberDictionary;
+    public IDictionary<Country, string> MobileNumberPatterns;
+
+    private readonly MobileNumberPatternCollection _mobileNumberPatternCollection;
 
     public CultureManager(CultureConfig cultureConfig)
     {
-        _mobileNumberDictionary = new Dictionary<Country, string>();
-        _mobileNumberCollection = new MobileNumberCollection(cultureConfig);
+        _mobileNumberPatternCollection = new MobileNumberPatternCollection(cultureConfig);
+
+        MobileNumberPatterns = new Dictionary<Country, string>();
 
         InitializeMobileNumberDirectory();
     }
 
     public string GetMobileNumberPattern(Country country)
     {
-        return _mobileNumberDictionary.SingleOrDefault(
+        return MobileNumberPatterns.SingleOrDefault(
             x => x.Key == country).Value;
     }
 
+    public class UrlPatterns
+    {
+    }
+
+    public class SqlPatterns
+    {
+    }
+
+    public class EmailPatterns
+    {
+    }
+
+    public class HtmlPatterns
+    {
+    }
+
     private void InitializeMobileNumberDirectory()
-        => _mobileNumberDictionary = _mobileNumberCollection.GetMobileNumberPatterns();
+        => MobileNumberPatterns = _mobileNumberPatternCollection.GetMobileNumberPatterns();
 }
