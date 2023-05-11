@@ -1,4 +1,5 @@
-﻿using BetterRegex.Definition.Patterns;
+﻿using System.Collections.ObjectModel;
+using BetterRegex.Definition.Patterns;
 
 using BetterRegex.Common.Configs;
 using BetterRegex.Common.Types;
@@ -7,15 +8,13 @@ namespace BetterRegex.Definition;
 
 public class CultureManager
 {
-    public IDictionary<Country, string> MobileNumberPatterns;
+    public IReadOnlyDictionary<Country, string> MobileNumberPatterns = null!;
 
     private readonly MobileNumberPatternCollection _mobileNumberPatternCollection;
 
     public CultureManager(CultureConfig cultureConfig)
     {
         _mobileNumberPatternCollection = new MobileNumberPatternCollection(cultureConfig);
-
-        MobileNumberPatterns = new Dictionary<Country, string>();
 
         InitializeMobileNumberDirectory();
     }
@@ -82,5 +81,9 @@ public class CultureManager
     }
 
     private void InitializeMobileNumberDirectory()
-        => MobileNumberPatterns = _mobileNumberPatternCollection.GetMobileNumberPatterns();
+    {
+        var mobilePatterns = _mobileNumberPatternCollection.GetMobileNumberPatterns();
+
+        MobileNumberPatterns = new ReadOnlyDictionary<Country, string>(mobilePatterns);
+    }
 }
