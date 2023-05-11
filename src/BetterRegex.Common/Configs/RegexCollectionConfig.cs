@@ -1,6 +1,6 @@
 ﻿namespace BetterRegex.Common.Configs;
 
-public class CultureConfig
+public class RegexCollectionConfig
 {
     public bool ShouldIncludeAsiaMobilePatterns { get; private set; }
 
@@ -10,25 +10,25 @@ public class CultureConfig
 
     public bool ShouldIncludeEuropeMobilePatterns { get; private set; }
 
-    public CultureConfig IncludeAsiaMobilePatterns()
+    public RegexCollectionConfig IncludeAsiaMobilePatterns()
     {
         ShouldIncludeAsiaMobilePatterns = true;
         return this;
     }
 
-    public CultureConfig IncludeAmericaMobilePatterns()
+    public RegexCollectionConfig IncludeAmericaMobilePatterns()
     {
         ShouldIncludeAmericaMobilePatterns = true;
         return this;
     }
 
-    public CultureConfig IncludeAfricaMobilePatterns()
+    public RegexCollectionConfig IncludeAfricaMobilePatterns()
     {
         ShouldIncludeAfricaMobilePatterns = true;
         return this;
     }
 
-    public CultureConfig IncludeEuropeMobilePatterns()
+    public RegexCollectionConfig IncludeEuropeMobilePatterns()
     {
         ShouldIncludeEuropeMobilePatterns = true;
         return this;

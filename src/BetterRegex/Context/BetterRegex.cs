@@ -9,10 +9,10 @@ public static class BetterRegex
     {
     }
 
-    public static CultureManager? CultureManager { get; private set; }
+    public static RegexCollection? RegexCollection { get; private set; }
 
-    public static void InitializePatterns(CultureConfig cultureConfig)
+    public static void InitializePatterns(RegexCollectionConfig regexCollectionConfig)
     {
-        CultureManager = new CultureManager(cultureConfig);
+        RegexCollection = new RegexCollection(regexCollectionConfig);
     }
 }

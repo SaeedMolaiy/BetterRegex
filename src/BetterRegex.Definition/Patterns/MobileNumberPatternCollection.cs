@@ -7,14 +7,14 @@ namespace BetterRegex.Definition.Patterns;
 
 internal class MobileNumberPatternCollection
 {
-    private readonly CultureConfig _cultureConfig;
+    private readonly RegexCollectionConfig _regexCollectionConfig;
     private readonly IDictionary<Country, string> _mobileNumberPatterns;
 
-    public MobileNumberPatternCollection(CultureConfig cultureConfig)
+    public MobileNumberPatternCollection(RegexCollectionConfig regexCollectionConfig)
     {
         _mobileNumberPatterns = new Dictionary<Country, string>();
 
-        _cultureConfig = cultureConfig;
+        _regexCollectionConfig = regexCollectionConfig;
     }
 
     public IDictionary<Country, string> GetMobileNumberPatterns()
@@ -26,28 +26,28 @@ internal class MobileNumberPatternCollection
 
     private void InitializeDictionary()
     {
-        if (_cultureConfig.ShouldIncludeAfricaMobilePatterns)
+        if (_regexCollectionConfig.ShouldIncludeAfricaMobilePatterns)
         {
             var africaMobileNumberPatterns = new AfricaMobileNumbers();
 
             africaMobileNumberPatterns.AddAfricaMobileNumberPatterns(_mobileNumberPatterns);
         }
 
-        if (_cultureConfig.ShouldIncludeAmericaMobilePatterns)
+        if (_regexCollectionConfig.ShouldIncludeAmericaMobilePatterns)
         {
             var americaMobileNumberPatterns = new AmericaMobileNumbers();
 
             americaMobileNumberPatterns.AddAmericaMobileNumberPatterns(_mobileNumberPatterns);
         }
 
-        if (_cultureConfig.ShouldIncludeAsiaMobilePatterns)
+        if (_regexCollectionConfig.ShouldIncludeAsiaMobilePatterns)
         {
             var asiaMobileNumberPatterns = new AsiaMobileNumbers();
 
             asiaMobileNumberPatterns.AddAsiaMobileNumberPatterns(_mobileNumberPatterns);
         }
 
-        if (!_cultureConfig.ShouldIncludeEuropeMobilePatterns)
+        if (!_regexCollectionConfig.ShouldIncludeEuropeMobilePatterns)
         {
             return;
         }
