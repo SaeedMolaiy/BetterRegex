@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+ 
 using BetterRegex.Definition.Patterns;
 
 using BetterRegex.Common.Configs;
