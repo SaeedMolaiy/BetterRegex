@@ -7,7 +7,7 @@ public static class DictionaryHelper
     public static void MergeDictionaries(this IDictionary<Country, string> dictionary,
                                          IDictionary<Country, string> mergeDictionary)
     {
-        foreach (KeyValuePair<Country, string> pattern in mergeDictionary)
+        foreach (var pattern in mergeDictionary)
         {
             if (!dictionary.ContainsKey(pattern.Key))
             {

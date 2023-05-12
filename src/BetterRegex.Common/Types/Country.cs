@@ -245,7 +245,7 @@ public enum Country
     Venezuela,
     Vietnam,
     VirginIslandsBritish,
-    VirginIslandsUS,
+    VirginIslandsUs,
     WallisAndFutuna,
     WesternSahara,
     Yemen,
