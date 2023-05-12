@@ -2,35 +2,11 @@
 
 public class RegexCollectionConfig
 {
-    public bool ShouldIncludeAsiaMobilePatterns { get; private set; }
+    public bool ShouldIncludeAsiaMobilePatterns { get; set; } = false;
 
-    public bool ShouldIncludeAmericaMobilePatterns { get; private set; }
+    public bool ShouldIncludeAmericaMobilePatterns { get; set; } = false;
 
-    public bool ShouldIncludeAfricaMobilePatterns { get; private set; }
+    public bool ShouldIncludeAfricaMobilePatterns { get; set; } = false;
 
-    public bool ShouldIncludeEuropeMobilePatterns { get; private set; }
-
-    public RegexCollectionConfig IncludeAsiaMobilePatterns()
-    {
-        ShouldIncludeAsiaMobilePatterns = true;
-        return this;
-    }
-
-    public RegexCollectionConfig IncludeAmericaMobilePatterns()
-    {
-        ShouldIncludeAmericaMobilePatterns = true;
-        return this;
-    }
-
-    public RegexCollectionConfig IncludeAfricaMobilePatterns()
-    {
-        ShouldIncludeAfricaMobilePatterns = true;
-        return this;
-    }
-
-    public RegexCollectionConfig IncludeEuropeMobilePatterns()
-    {
-        ShouldIncludeEuropeMobilePatterns = true;
-        return this;
-    }
+    public bool ShouldIncludeEuropeMobilePatterns { get; set; } = false;
 }
