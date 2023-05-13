@@ -9,13 +9,58 @@ public class SqlManager
     }
 
     /// <summary>
+    ///     Splits a SQL query by the "GO" command and returns an array of individual queries.
+    /// </summary>
+    /// <param name="sqlQuery">The SQL query to split.</param>
+    /// <returns>An array of individual queries.</returns>  
+    public string[] SplitQueryByGoCommand(string sqlQuery)
+    {
+        const string pattern = @"\bGO\b";
+        return Regex.Split(sqlQuery, pattern, RegexOptions.Multiline);
+    }
+
+    /// <summary>
+    ///     Formats an SQL query by adding line breaks before specific statements.
+    /// </summary>
+    /// <param name="sqlQuery">The SQL query to format.</param>
+    /// <returns>The formatted SQL query.</returns>
+    public string FormatSqlQuery(string sqlQuery)
+    {
+        sqlQuery = sqlQuery.Trim();
+
+        sqlQuery = Regex.Replace(
+            sqlQuery, @"\b(SELECT|FROM|WHERE|JOIN)\b",
+            Environment.NewLine + "$1", RegexOptions.IgnoreCase);
+
+        return sqlQuery;
+    }
+
+    /// <summary>
+    ///     Validates a connection string by checking its format and the presence of user credentials.
+    /// </summary>
+    /// <param name="connectionString">The connection string to validate.</param>
+    /// <returns><c>true</c> if the connection string is valid; otherwise, <c>false</c>.</returns>
+    public bool IsValidConnectionString(string connectionString)
+    {
+        const string pattern = @"^(?:(?:Data Source|Server)=[^;]+;){0,1}" +
+                               @"(?:Database|Initial Catalog)=[^;]+;" +
+                               @"(?:User ID|UID)=[^;]+;(?:Password|PWD)=[^;]+;" +
+                               @"(?:.+=.+;?)*$";
+
+        var regex = new Regex(pattern, RegexOptions.IgnoreCase);
+        var match = regex.Match(connectionString);
+
+        return match.Success;
+    }
+
+    /// <summary>
     ///     Match a T-SQL statement that starts with SELECT, INSERT, UPDATE, DELETE, or EXECUTE
     /// </summary>
     /// <param name="tsql"></param>
     /// <returns></returns>
-    public static bool IsValidTSql(string tsql)
+    public bool IsValidTSql(string sql)
     {
-        string pattern = @"^(SELECT|INSERT|UPDATE|DELETE|EXECUTE)\s.+$";
-        return Regex.IsMatch(tsql, pattern);
+        const string pattern = @"^(SELECT|INSERT|UPDATE|DELETE|EXECUTE)\s.+$";
+        return Regex.IsMatch(sql, pattern);
     }
 }
