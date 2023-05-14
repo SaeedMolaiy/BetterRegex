@@ -8,15 +8,25 @@ public static class BetterRegex
 {
     static BetterRegex()
     {
-        Html = new HtmlManager();
-        Sql = new SqlManager();
     }
 
     public static RegexCollection? RegexCollection { get; private set; }
 
-    public static HtmlManager Html { get; }
+    public static HtmlManager Html
+    {
+        get
+        {
+            return HtmlManager.Instance;
+        }
+    }
 
-    public static SqlManager Sql { get; }
+    public static SqlManager Sql
+    {
+        get
+        {
+            return SqlManager.Instance;
+        }
+    }
 
     public static void InitializePatterns(RegexCollectionConfig regexCollectionConfig)
     {

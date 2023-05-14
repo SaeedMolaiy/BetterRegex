@@ -4,7 +4,10 @@ namespace BetterRegex.Primitive;
 
 public class SqlManager
 {
-    internal SqlManager()
+    private static readonly Lazy<SqlManager> LazyInstance =
+            new(() => new SqlManager(), LazyThreadSafetyMode.ExecutionAndPublication);
+
+    private SqlManager()
     {
     }
 
@@ -75,4 +78,6 @@ public class SqlManager
         var pattern = @$"^{schema}\.\w+$";
         return Regex.IsMatch(tableName, pattern);
     }
+
+    public static SqlManager Instance => LazyInstance.Value;
 }

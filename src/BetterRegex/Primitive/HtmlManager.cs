@@ -4,7 +4,10 @@ namespace BetterRegex.Primitive;
 
 public class HtmlManager
 {
-    internal HtmlManager()
+    private static readonly Lazy<HtmlManager> LazyInstance =
+            new(() => new HtmlManager(), LazyThreadSafetyMode.ExecutionAndPublication);
+
+    private HtmlManager()
     {
     }
 
@@ -18,4 +21,6 @@ public class HtmlManager
         const string pattern = @"^<.+>$";
         return Regex.IsMatch(htmlTag, pattern);
     }
+
+    public static HtmlManager Instance => LazyInstance.Value;
 }
