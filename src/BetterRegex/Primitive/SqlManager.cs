@@ -56,11 +56,23 @@ public class SqlManager
     /// <summary>
     ///     Match a T-SQL statement that starts with SELECT, INSERT, UPDATE, DELETE, or EXECUTE
     /// </summary>
-    /// <param name="tsql"></param>
+    /// <param name="sql"></param>
     /// <returns></returns>
     public bool IsValidTSql(string sql)
     {
         const string pattern = @"^(SELECT|INSERT|UPDATE|DELETE|EXECUTE)\s.+$";
         return Regex.IsMatch(sql, pattern);
+    }
+
+    /// <summary>
+    ///     Validates a Table name starts with specific schema. example : MySchema.People
+    /// </summary>  
+    /// <param name="tableName">The table name to validate.</param>
+    /// <param name="schema">The schema that table name should start with.</param>
+    /// <returns><c>true</c> if the table name starts with given schema; otherwise, <c>false</c>.</returns>
+    public bool ValidateTableSchema(string tableName, string schema)
+    {
+        var pattern = @$"^{schema}\.\w+$";
+        return Regex.IsMatch(tableName, pattern);
     }
 }
