@@ -12,21 +12,9 @@ public static class BetterRegex
 
     public static RegexCollection? RegexCollection { get; private set; }
 
-    public static HtmlManager Html
-    {
-        get
-        {
-            return HtmlManager.Instance;
-        }
-    }
+    public static HtmlManager Html => HtmlManager.Instance;
 
-    public static SqlManager Sql
-    {
-        get
-        {
-            return SqlManager.Instance;
-        }
-    }
+    public static SqlManager Sql => SqlManager.Instance;
 
     public static void InitializePatterns(RegexCollectionConfig regexCollectionConfig)
     {

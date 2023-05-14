@@ -11,6 +11,8 @@ public class SqlManager
     {
     }
 
+    public static SqlManager Instance => LazyInstance.Value;
+
     /// <summary>
     ///     Splits a SQL query by the "GO" command and returns an array of individual queries.
     /// </summary>
@@ -78,6 +80,4 @@ public class SqlManager
         var pattern = @$"^{schema}\.\w+$";
         return Regex.IsMatch(tableName, pattern);
     }
-
-    public static SqlManager Instance => LazyInstance.Value;
 }
