@@ -53,7 +53,7 @@ public class HtmlManager
             var elementInfo = new ElementInfo
             {
                 TagName = tagName,
-                Attributes = new Dictionary<string, string>()!,
+                Attributes = new Dictionary<string, string>(),
                 Styles = new Dictionary<string, string>()
             };
 
@@ -63,6 +63,45 @@ public class HtmlManager
         }
 
         return elements;
+    }
+
+    /// <summary>
+    ///     Finds an HTML element with the specified Id in the given HTML content.
+    /// </summary>
+    /// <param name="htmlContent">The HTML content to search in.</param>
+    /// <param name="elementId">The ID of the element to find.</param>
+    /// <returns>An <see cref="ElementInfo"/> object representing the found HTML element, or null if not found.</returns>
+    public ElementInfo? FindElementById(string htmlContent, string elementId)
+    {
+        const string elementPattern = @"<(?<tag>\w+)\s+(?<attributes>[^>]+)id\s*=\s*""(?<idValue>[^""]+)""[^>]*>";
+
+        ElementInfo? elementInfo = null;
+
+        foreach (Match match in Regex.Matches(htmlContent, elementPattern, RegexOptions.IgnoreCase))
+        {
+            var tag = match.Groups["tag"].Value;
+            var attributes = match.Groups["attributes"].Value;
+            var idValue = match.Groups["idValue"].Value;
+
+            if (!idValue.Equals(elementId, StringComparison.OrdinalIgnoreCase))
+            {
+                continue;
+            }
+
+            elementInfo = new ElementInfo
+            {
+                TagName = tag,
+                Id = idValue,
+                Attributes = new Dictionary<string, string>(),
+                Styles = new Dictionary<string, string>()
+            };
+
+            FillElementInfo(attributes, elementInfo);
+
+            break;
+        }
+
+        return elementInfo;
     }
 
     /// <summary>
