@@ -47,6 +47,13 @@ internal class MobileNumberPatternCollection
             asiaMobileNumberPatterns.AddAsiaMobileNumberPatterns(_mobileNumberPatterns);
         }
 
+        if (!_regexCollectionConfig.ShouldIncludeOceaniaMobilePatterns)
+        {
+            var oceaniaMobileNumberPatterns = new OceaniaMobileNumbers();
+
+            oceaniaMobileNumberPatterns.AddOceaniaMobileNumberPatterns(_mobileNumberPatterns);
+        }
+
         if (!_regexCollectionConfig.ShouldIncludeEuropeMobilePatterns)
         {
             return;

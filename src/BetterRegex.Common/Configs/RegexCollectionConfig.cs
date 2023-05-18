@@ -9,4 +9,6 @@ public class RegexCollectionConfig
     public bool ShouldIncludeAfricaMobilePatterns { get; set; } = false;
 
     public bool ShouldIncludeEuropeMobilePatterns { get; set; } = false;
+
+    public bool ShouldIncludeOceaniaMobilePatterns { get; set; } = false;
 }
