@@ -158,58 +158,58 @@ Vatican City (Holy See)
 
 North America:
 
-Antigua and Barbuda
-Bahamas
-Barbados
-Belize
-Canada
-Costa Rica
-Cuba
-Dominica
-Dominican Republic
-El Salvador
-Grenada
-Guatemala
-Haiti
-Honduras
-Jamaica
-Mexico
-Nicaragua
-Panama
-Saint Kitts and Nevis
-Saint Lucia
-Saint Vincent and the Grenadines
-Trinidad and Tobago
-United States of America (USA)
+Antigua and Barbuda: /^(001268|+1-268)?(7\d{6})$/
+Bahamas: /^(001242|+1-242)?(4\d{6})$/
+Barbados: /^(001246|+1-246)?(2\d{6})$/
+Belize: /^(00501|+501)?(6\d{6})$/
+Canada: /^(001|+1)?([2-9]\d{9})$/
+Costa Rica: /^(00506|+506)?([2-9]\d{7})$/
+Cuba: /^(0053|+53)?(5\d{7})$/
+Dominica: /^(001767|+1-767)?(2\d{6})$/
+Dominican Republic: /^(001809|001829|001849|+1-809|+1-829|+1-849)?(8\d{7})$/
+El Salvador: /^(00503|+503)?(6\d{7})$/
+Grenada: /^(001473|+1-473)?(4\d{6})$/
+Guatemala: /^(00502|+502)?(4\d{7})$/
+Haiti: /^(00509|+509)?(4\d{7})$/
+Honduras: /^(00504|+504)?(9\d{7})$/
+Jamaica: /^(001876|+1-876)?(7\d{6})$/
+Mexico: /^(0052|+52)?(1\d{10})$/
+Nicaragua: /^(00505|+505)?(8\d{7})$/
+Panama: /^(00507|+507)?(6\d{7})$/
+Saint Kitts and Nevis: /^(001869|+1-869)?(6\d{6})$/
+Saint Lucia: /^(001758|+1-758)?(5\d{6})$/
+Saint Vincent and the Grenadines: /^(001784|+1-784)?(4\d{6})$/
+Trinidad and Tobago: /^(001868|+1-868)?(7\d{6})$/
+United States of America (USA): /^(001|+1)?([2-9]\d{9})$/
 
 South America:
 
-Argentina
-Bolivia
-Brazil
-Chile
-Colombia
-Ecuador
-Guyana
-Paraguay
-Peru
-Suriname
-Uruguay
-Venezuela
+Argentina: /^(0054|+54|0)(9\d{8})$/
+Bolivia: /^(00591|+591)(6|7)\d{7}$/
+Brazil: /^(0055|+55|0)([679])?(\d{2})(\d{4,5})(\d{4})$/
+Chile: /^(0056|+56|0)?(9\d{8})$/
+Colombia: /^(0057|+57)(3\d{9})$/
+Ecuador: /^(00593|+593)(9\d{8})$/
+Guyana: /^(00592|+592)(6\d{6})$/
+Paraguay: /^(00595|+595)(9\d{8})$/
+Peru: /^(0051|+51|0)?(9\d{8})$/
+Suriname: /^(00597|+597)(6\d{6})$/
+Uruguay: /^(00598|+598|0)(9\d{7})$/
+Venezuela: /^(0058|+58|0)(4\d{9})$/
 
 Oceania:
 
-Australia
-Fiji
-Kiribati
-Marshall Islands
-Micronesia
-Nauru
-New Zealand
-Palau
-Papua New Guinea
-Samoa
-Solomon Islands
-Tonga
-Tuvalu
-Vanuatu
+Australia: /^(0061|+61|0)[1-9]\d{8}$/
+Fiji: /^(00679|+679)(7|8)\d{6}$/
+Kiribati: /^(00686|+686)(9\d{6}|2\d{5})$/
+Marshall Islands: /^(00692|+692)\d{7}$/
+Micronesia: /^(00691|+691)(3|9)\d{6}$/
+Nauru: /^(00674|+674)\d{7}$/
+New Zealand: /^(0064|+64|0)[28]\d{7,9}$/
+Palau: /^(00680|+680)\d{7}$/
+Papua New Guinea: /^(00675|+675)(7[45678]|8[12])\d{6}$/
+Samoa: /^(00685|+685)[7238]\d{6}$/
+Solomon Islands: /^(00677|+677)[78]\d{6}$/
+Tonga: /^(00676|+676)7\d{6}$/
+Tuvalu: /^(00688|+688)(90[1-9]|91[0-4])\d{4}$/
+Vanuatu: /^(00678|+678)[56789]\d{5}$/
