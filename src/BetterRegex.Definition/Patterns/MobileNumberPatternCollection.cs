@@ -8,7 +8,7 @@ internal class MobileNumberPatternCollection
     private readonly RegexCollectionConfig _regexCollectionConfig;
     private readonly IDictionary<Country, string> _mobileNumberPatterns;
 
-    public MobileNumberPatternCollection(RegexCollectionConfig regexCollectionConfig)
+    internal MobileNumberPatternCollection(RegexCollectionConfig regexCollectionConfig)
     {
         _mobileNumberPatterns = new Dictionary<Country, string>();
 
