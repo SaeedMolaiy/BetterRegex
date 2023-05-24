@@ -172,5 +172,51 @@ internal class MobileNumberPatternCollection
 
     private void AddEuropeMobileNumberPatterns()
     {
+        _mobileNumberPatterns.Add(Country.Albania, "/^(00355|+355)?(6\\d{8})$/");
+        _mobileNumberPatterns.Add(Country.Andorra, "/^(00376|+376)?(6\\d{7})$/");
+        _mobileNumberPatterns.Add(Country.Australia, "/^(0043|+43)?(6\\d{8,9})$/");
+        _mobileNumberPatterns.Add(Country.Belarus, "/^(00375|+375)?(\\d{9})$/");
+        _mobileNumberPatterns.Add(Country.Belgium, "/^(0032|+32)?(4\\d{8})$/");
+        _mobileNumberPatterns.Add(Country.BosniaAndHerzegovina, "/^(00387|+387)?([6-9]\\d{7})$/");
+        _mobileNumberPatterns.Add(Country.Bulgaria, "/^(00359|+359)?(8\\d{8})$/");
+        _mobileNumberPatterns.Add(Country.Croatia, "/^(00385|+385)?(9\\d{8})$/");
+        _mobileNumberPatterns.Add(Country.Cyprus, "/^(00357|+357)?(9\\d{7})$/");
+        _mobileNumberPatterns.Add(Country.CzechRepublic, "/^(00420|+420)?([6-9]\\d{8})$/");
+        _mobileNumberPatterns.Add(Country.Denmark, "/^(0045|+45)?(\\d{8})$/");
+        _mobileNumberPatterns.Add(Country.Estonia, "/^(00372|+372)?([5-8]\\d{7})$/");
+        _mobileNumberPatterns.Add(Country.Finland, "/^(00358|+358)?(4\\d{8})$/");
+        _mobileNumberPatterns.Add(Country.France, "/^(0033|+33)?(6\\d{8})$/");
+        _mobileNumberPatterns.Add(Country.Germany, "/^(0049|+49)?([1-9]\\d{8,12})$/");
+        _mobileNumberPatterns.Add(Country.Greece, "/^(0030|+30)?(6\\d{9})$/");
+        _mobileNumberPatterns.Add(Country.Hungary, "/^(0036|+36)?(20\\d{7})$/");
+        _mobileNumberPatterns.Add(Country.Iceland, "/^(00354|+354)?([6-9]\\d{6})$/");
+        _mobileNumberPatterns.Add(Country.Ireland, "/^(00353|+353)?(8\\d{8})$/");
+        _mobileNumberPatterns.Add(Country.Italy, "/^(0039|+39)?(3\\d{9})$/");
+        _mobileNumberPatterns.Add(Country.Latvia, "/^(00371|+371)?([2-9]\\d{7})$/");
+        _mobileNumberPatterns.Add(Country.Liechtenstein, "/^(00423|+423)?(\\d{7})$/");
+        _mobileNumberPatterns.Add(Country.Lithuania, "/^(00370|+370)?(6\\d{7})$/");
+        _mobileNumberPatterns.Add(Country.Luxembourg, "/^(00352|+352)?(\\d{8})$/");
+        _mobileNumberPatterns.Add(Country.Malta, "/^(00356|+356)?(79\\d{6})$/");
+        _mobileNumberPatterns.Add(Country.Moldova, "/^(00373|+373)?(6\\d{7})$/");
+        _mobileNumberPatterns.Add(Country.Monaco, "/^(00377|+377)?(\\d{8})$/");
+        _mobileNumberPatterns.Add(Country.Montenegro, "/^(00382|+382)?([67]\\d{7})$/");
+        _mobileNumberPatterns.Add(Country.Netherlands, "/^(0031|+31)?(6\\d{8})$/");
+        _mobileNumberPatterns.Add(Country.Macedonia, "/^(00389|+389)?(7\\d{7})$/");
+        _mobileNumberPatterns.Add(Country.Macedonia, "/^(00389|+389)?(7\\d{7})$/");
+        _mobileNumberPatterns.Add(Country.Norway, "/^(0047|+47)?([49]\\d{7})$/");
+        _mobileNumberPatterns.Add(Country.Poland, "/^(0048|+48)?(5\\d{8})$/");
+        _mobileNumberPatterns.Add(Country.Portugal, "/^(00351|+351)?(9\\d{8})$/");
+        _mobileNumberPatterns.Add(Country.Romania, "/^(0040|+40)?(7[2-8]\\d{7})$/");
+        _mobileNumberPatterns.Add(Country.RussianFederation, "/^(007|+7)?(\\d{10})$/");
+        _mobileNumberPatterns.Add(Country.SanMarino, "/^(00378|+378)?(\\d{8})$/");
+        _mobileNumberPatterns.Add(Country.Serbia, "/^(00381|+381)?([6-7]\\d{7})$/");
+        _mobileNumberPatterns.Add(Country.Slovakia, "/^(00421|+421)?([6-9]\\d{8})$/");
+        _mobileNumberPatterns.Add(Country.Slovenia, "/^(00386|+386)?([3-9]\\d{7})$/");
+        _mobileNumberPatterns.Add(Country.Spain, "/^(0034|+34)?(6\\d{8})$/");
+        _mobileNumberPatterns.Add(Country.Sweden, "/^(0046|+46)?(7\\d{8})$/");
+        _mobileNumberPatterns.Add(Country.Switzerland, "/^(0041|+41)?(7\\d{8})$/");
+        _mobileNumberPatterns.Add(Country.Ukraine, "/^(00380|+380)?(9\\d{8})$/");
+        _mobileNumberPatterns.Add(Country.UnitedKingdom, "/^(0044|+44)?(7\\d{9})$/");
+        _mobileNumberPatterns.Add(Country.HolySeeVaticanCityState, "/^(00379|+379)?(\\d{8})$/");
     }
 }
