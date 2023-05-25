@@ -150,6 +150,53 @@ internal class MobileNumberPatternCollection
 
     private void AddAsiaMobileNumberPatterns()
     {
+        _mobileNumberPatterns.Add(Country.Afghanistan, "/^(0093|+93)?(7\\d{8})$/");
+        _mobileNumberPatterns.Add(Country.Armenia, "/^(00374|+374)?([4-7]\\d{7})$/");
+        _mobileNumberPatterns.Add(Country.Azerbaijan, "/^(00994|+994)?(5\\d{8})$/");
+        _mobileNumberPatterns.Add(Country.Bahrain, "/^(00973|+973)?(3\\d{7})$/");
+        _mobileNumberPatterns.Add(Country.Bangladesh, "/^(0088|+88)?(1\\d{9})$/");
+        _mobileNumberPatterns.Add(Country.Bhutan, "/^(00975|+975)?(17\\d{6})$/");
+        _mobileNumberPatterns.Add(Country.BruneiDarussalam, "/^(00673|+673)?(7\\d{7})$/");
+        _mobileNumberPatterns.Add(Country.Cambodia, "/^(00855|+855)?(1\\d{8})$/");
+        _mobileNumberPatterns.Add(Country.China, "/^(0086|+86)?(1\\d{10})$/");
+        _mobileNumberPatterns.Add(Country.Georgia, "/^(00995|+995)?(5\\d{8})$/");
+        _mobileNumberPatterns.Add(Country.India, "/^(0091|+91)?([6789]\\d{9})$/");
+        _mobileNumberPatterns.Add(Country.Indonesia, "/^(0062|+62)?(8\\d{10})$/");
+        _mobileNumberPatterns.Add(Country.Iran, "/^(0098|+98)?(9\\d{9})$/");
+        _mobileNumberPatterns.Add(Country.Iraq, "/^(00964|+964)?(7[0-9]\\d{8})$/");
+        _mobileNumberPatterns.Add(Country.Israel, "/^(00972|+972)?(5\\d{8})$/");
+        _mobileNumberPatterns.Add(Country.Israel, "/^(0081|+81)?(90\\d{8}|[1-9]\\d{9})$/");
+        _mobileNumberPatterns.Add(Country.Japan, "/^(0081|+81)?(90\\d{8}|[1-9]\\d{9})$/");
+        _mobileNumberPatterns.Add(Country.Jordan, "/^(00962|+962)?(7[789]\\d{7})$/");
+        _mobileNumberPatterns.Add(Country.Kazakhstan, "/^(007|+7)?([7-8]\\d{9})$/");
+        _mobileNumberPatterns.Add(Country.Kuwait, "/^(00965|+965)?(5\\d{7})$/");
+        _mobileNumberPatterns.Add(Country.Kyrgyzstan, "/^(00996|+996)?(5\\d{8})$/");
+        _mobileNumberPatterns.Add(Country.Lebanon, "/^(00961|+961)?(3\\d{7})$/");
+        _mobileNumberPatterns.Add(Country.Malaysia, "/^(0060|+60)?(1\\d{8,9})$/");
+        _mobileNumberPatterns.Add(Country.Maldives, "/^(00960|+960)?(9\\d{7})$/");
+        _mobileNumberPatterns.Add(Country.Mongolia, "/^(00976|+976)?(8\\d{7})$/");
+        _mobileNumberPatterns.Add(Country.Myanmar, "/^(0095|+95)?(9\\d{8})$/");
+        _mobileNumberPatterns.Add(Country.Nepal, "/^(00977|+977)?(98[0-9]\\d{6})$/");
+        _mobileNumberPatterns.Add(Country.NorthKorea, "/^(00850|+850)?(1\\d{9})$/");
+        _mobileNumberPatterns.Add(Country.Oman, "/^(00968|+968)?(9[1-9]\\d{6})$/");
+        _mobileNumberPatterns.Add(Country.Pakistan, "/^(0092|+92)?(3\\d{9})$/");
+        _mobileNumberPatterns.Add(Country.Palestine, "/^(00972|+972)?(5\\d{8})$/");
+        _mobileNumberPatterns.Add(Country.Philippines, "/^(0063|+63)?(9\\d{9})$/");
+        _mobileNumberPatterns.Add(Country.Qatar, "/^(00974|+974)?(33\\d{6})$/");
+        _mobileNumberPatterns.Add(Country.SaudiArabia, "/^(00966|+966)?(5\\d{8})$/");
+        _mobileNumberPatterns.Add(Country.Singapore, "/^(0065|+65)?([689]\\d{7})$/");
+        _mobileNumberPatterns.Add(Country.SouthKorea, "/^(0082|+82)?(1\\d{9})$/");
+        _mobileNumberPatterns.Add(Country.SriLanka, "/^(0094|+94)?(7\\d{8})$/");
+        _mobileNumberPatterns.Add(Country.SyrianArabRepublic, "/^(00963|+963)?(9\\d{8})$/");
+        _mobileNumberPatterns.Add(Country.Taiwan, "/^(00886|+886)?(9\\d{8})$/");
+        _mobileNumberPatterns.Add(Country.Tajikistan, "/^(00992|+992)?(9[012345]\\d{7})$/");
+        _mobileNumberPatterns.Add(Country.Thailand, "/^(0066|+66)?(8\\d{8})$/");
+        _mobileNumberPatterns.Add(Country.Turkey, "/^(0090|+90)?(5\\d{9})$/");
+        _mobileNumberPatterns.Add(Country.Turkmenistan, "/^(00993|+993)?(6\\d{7})$/");
+        _mobileNumberPatterns.Add(Country.UnitedArabEmirates, "/^(00971|+971)?(5\\d{8})$/");
+        _mobileNumberPatterns.Add(Country.Uzbekistan, "/^(00998|+998)?(9[01234589]\\d{7})$/");
+        _mobileNumberPatterns.Add(Country.Vietnam, "/^(0084|+84)?(9\\d{8})$/");
+        _mobileNumberPatterns.Add(Country.Yemen, "/^(00967|+967)?(7\\d{8})$/");
     }
 
     private void AddOceaniaMobileNumberPatterns()
@@ -174,7 +221,7 @@ internal class MobileNumberPatternCollection
     {
         _mobileNumberPatterns.Add(Country.Albania, "/^(00355|+355)?(6\\d{8})$/");
         _mobileNumberPatterns.Add(Country.Andorra, "/^(00376|+376)?(6\\d{7})$/");
-        _mobileNumberPatterns.Add(Country.Australia, "/^(0043|+43)?(6\\d{8,9})$/");
+        _mobileNumberPatterns.Add(Country.Austria, "/^(0043|+43)?(6\\d{8,9})$/");
         _mobileNumberPatterns.Add(Country.Belarus, "/^(00375|+375)?(\\d{9})$/");
         _mobileNumberPatterns.Add(Country.Belgium, "/^(0032|+32)?(4\\d{8})$/");
         _mobileNumberPatterns.Add(Country.BosniaAndHerzegovina, "/^(00387|+387)?([6-9]\\d{7})$/");
